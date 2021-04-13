@@ -46,7 +46,7 @@ export default function ProductScreen(props) {
                                 <div className="row">
                                     <div>Status</div>
                                     <div>{product.countInStock > 0 ? ( <span className="success">구매가능</span> ) : (
-                                    <span className="error">품절</span>)}
+                                    <span className="danger">품절</span>)}
                                     </div>
                                 </div>
                             </li>
