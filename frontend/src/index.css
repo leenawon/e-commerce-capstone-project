@@ -61,6 +61,22 @@ button.block {
   width: 100%;
 }
 
+html {
+  /* 16px x 62.5 = 10px = 1rem */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Header */
 #header a {
   color: var(--white-color);
@@ -109,20 +125,8 @@ button.block {
   flex: 2 1 50rem;
 }
 
-html {
-  /* 16px x 62.5 = 10px = 1rem */
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.min-30 {
+  min-width: 30rem;
 }
 
 /* Layout */
@@ -168,6 +172,11 @@ img {
   border-radius: 0.5rem;
 }
 
+img.small {
+  max-width: 10rem;
+  width: 100%;
+}
+
 img.medium {
   max-width: 29rem;
   width: 100%;
@@ -182,6 +191,8 @@ img.product-image {
   width: 100%;
 }
 
+/* Card */
+
 .product-card {
   border: 0.1rem solid #c0c0c0;
   background-color: #f8f8f8;
@@ -189,7 +200,7 @@ img.product-image {
   margin: 1rem;
 }
 
-.product-card .card-content {
+.card-content {
   padding: 1rem;
 }
 

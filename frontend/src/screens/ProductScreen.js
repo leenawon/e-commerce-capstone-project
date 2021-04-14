@@ -34,7 +34,7 @@ export default function ProductScreen(props) {
                 <div className="col-2">
                     <img className="large" src={product.image} alt={product.name}></img>
                 </div>
-                    <div className="col-1">
+                    <div className="col-1 card-content">
                         <ul>
                             <li>
                                 <h1>{product.name}</h1>
