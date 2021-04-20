@@ -18,7 +18,6 @@ const data = {
   ],
   products: [
     {
-      id: '1',
       name: 'Denim Pants',
       category: 'Pants',
       image: '/images/product-1.jpg',
@@ -30,7 +29,6 @@ const data = {
       description: 'high quality pants'
     },
     {
-      id: '2',
       name: 'Flower Dress',
       category: 'Dress',
       image: '/images/product-2.jpg',
@@ -42,8 +40,7 @@ const data = {
       description: 'high quality dress'
     },
     {
-      id: '3',
-      name: 'Flower Dress',
+      name: 'Flower Long Dress',
       category: 'Dress',
       image: '/images/product-2.jpg',
       price: 28000,
