@@ -45,9 +45,9 @@ export default function ProductScreen(props) {
                                 numReviews={product.numReviews}
                             ></Rating>    
                             </li>
-                            <li>Price : ${product.price}</li>
+                            <li>가격 : ${product.price}</li>
                             <li>
-                                Description:
+                                상품설명:
                                 <p>{product.description}</p>
                             </li>
                         </ul>
@@ -57,13 +57,13 @@ export default function ProductScreen(props) {
                             <ul>
                                 <li>
                                     <div className="row">
-                                        <div>Price</div>
+                                        <div>가격</div>
                                         <div className="price">${product.price}</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="row">
-                                        <div>Status</div>
+                                        <div>구매가능여부</div>
                                         <div>{product.countInStock > 0 ? ( <span className="success">구매가능</span> ) : (
                                         <span className="danger">품절</span>)}
                                         </div>
@@ -73,7 +73,7 @@ export default function ProductScreen(props) {
                                     <>
                                         <li>
                                             <div className="row">
-                                                <div>Qty</div>
+                                                <div>수량</div>
                                                 <div>
                                                     <select 
                                                         value={qty} 

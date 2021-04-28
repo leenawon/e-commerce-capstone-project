@@ -141,7 +141,7 @@ body {
 
 #header {
   grid-area: header;
-  background-color: var(--black-color);
+  background-color: #546e7a;
 }
 
 #main {
@@ -151,13 +151,13 @@ body {
 
 #footer {
   grid-area: footer;
-  background-color: var(--black-color);
+  background-color: #546e7a;
   color: var(--white-color);
 }
 
 .row-sorting {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -240,4 +240,22 @@ img.product-image {
 .alert-danger {
   color: #a02020;
   background-color: #ffe0e0e0;
+}
+
+/* Form */
+
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.form label {
+  margin: 1rem 0;
+  display: block;
 }
