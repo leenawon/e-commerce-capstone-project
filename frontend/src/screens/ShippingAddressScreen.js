@@ -28,32 +28,32 @@ export default function ShippingAddressScreen(props) {
             <CheckoutSteps step1 step2></CheckoutSteps>
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>Shipping Address</h1>
+                    <h1>배송지 주소</h1>
                 </div>
                 <div>
-                    <label htmlFor="fullName">Full Name</label>
-                    <input type="text" id="fullName" placeholder="Enter full name" value={fullName} onChange={(e) => setFullName(e.target.value)} required></input>
+                    <label htmlFor="fullName">이름</label>
+                    <input type="text" id="fullName" placeholder="이름을 입력하세요" value={fullName} onChange={(e) => setFullName(e.target.value)} required></input>
                 </div>
                 <div>
-                    <label htmlFor="address">Address</label>
-                    <input type="text" id="address" placeholder="Enter address" value={address} onChange={(e) => setAddress(e.target.value)} required></input>
+                    <label htmlFor="city">도/시</label>
+                    <input type="text" id="city" placeholder="도/시를 입력하세요" value={city} onChange={(e) => setCity(e.target.value)} required></input>
                 </div>
                 <div>
-                    <label htmlFor="city">City</label>
-                    <input type="text" id="city" placeholder="Enter city" value={city} onChange={(e) => setCity(e.target.value)} required></input>
+                    <label htmlFor="country">군/구</label>
+                    <input type="text" id="country" placeholder="군/구를 입력하세요" value={country} onChange={(e) => setCountry(e.target.value)} required></input>
                 </div>
                 <div>
-                    <label htmlFor="postalCode">Postal Code</label>
+                    <label htmlFor="postalCode">우편번호</label>
                     <input type="text" id="postalCode" placeholder="Enter postalcode" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required></input>
                 </div>
                 <div>
-                    <label htmlFor="country">Country</label>
-                    <input type="text" id="country" placeholder="Enter country" value={country} onChange={(e) => setCountry(e.target.value)} required></input>
+                    <label htmlFor="address">상세 주소</label>
+                    <input type="text" id="address" placeholder="상세주소를 입력하세요" value={address} onChange={(e) => setAddress(e.target.value)} required></input>
                 </div>
                 <div>
                     <label/>
                     <button className="primary" type="submit">
-                        Continue
+                        결제수단 선택하기
                     </button>
                 </div>
             </form>
