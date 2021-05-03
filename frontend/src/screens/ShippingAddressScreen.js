@@ -44,7 +44,7 @@ export default function ShippingAddressScreen(props) {
                 </div>
                 <div>
                     <label htmlFor="postalCode">우편번호</label>
-                    <input type="text" id="postalCode" placeholder="Enter postalcode" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required></input>
+                    <input type="text" id="postalCode" placeholder="우편번호를 입력하세요" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} required></input>
                 </div>
                 <div>
                     <label htmlFor="address">상세 주소</label>
