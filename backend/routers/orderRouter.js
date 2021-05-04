@@ -4,9 +4,9 @@ import Order from '../models/orderModel.js';
 import { isAuth } from '../utils.js';
 
 const orderRouter = express.Router();
-orderRouter.post('/'), isAuth, expressAsyncHandler(async(req,res) => {
+orderRouter.post('/', isAuth, expressAsyncHandler(async(req,res) => {
   if(req.body.orderItems.length === 0) {
-    res.status.send(400).send({message: '장바구니가 비었습니다.'});
+    res.status(400).send({message: '장바구니가 비었습니다.'});
   } else {
     const order = new Order({
       orderItems: req.body.orderItems,
@@ -19,7 +19,7 @@ orderRouter.post('/'), isAuth, expressAsyncHandler(async(req,res) => {
     });
     const createdOrder = await order.save();
     res.status(201).send({message: 'New Order Created', order: createdOrder});
-  }
-})
-
+    }
+  })
+);
 export default orderRouter;

@@ -19,7 +19,7 @@ export default function PaymentMethodScreen(props) {
     return (
         <div>
             <CheckoutSteps step1 step2 step3></CheckoutSteps>
-            <from className="form" onSubmit={submitHandler}>
+            <form className="form" onSubmit={submitHandler}>
                 <div>
                     <h1>결제 수단</h1>
                 </div>
@@ -52,7 +52,7 @@ export default function PaymentMethodScreen(props) {
                         Continue
                     </button>
                 </div>
-            </from>
+            </form>
         </div>
     )
 }
