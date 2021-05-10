@@ -9,6 +9,7 @@ import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -49,6 +50,9 @@ function App() {
                   <Link to="#">{userInfo.name} <i className = "fa fa-caret-down"></i></Link>
                   <ul className="dropdown-content">
                     <li>
+                      <Link to="/profile">내 프로필</Link>
+                    </li>
+                    <li>
                       <Link to="/orderhistory">주문내역</Link>
                     </li>
                     <li>
@@ -77,6 +81,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <Route path="/profile" component={ProfileScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
           
         </main>

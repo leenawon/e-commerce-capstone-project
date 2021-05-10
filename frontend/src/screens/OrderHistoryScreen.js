@@ -33,8 +33,8 @@ export default function OrderHistoryScreen(props) {
                 <td>{order._id}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
                 <td>{order.totalPrice}</td>
-                <td>{order.isPaid ? order.paidAt.substring(0, 10): 'No'}</td>
-                <td>{order.isDelivered ? order.deliveredAt.subString(0, 10): 'No'}</td>
+                <td>{order.isPaid ? order.paidAt.substring(0, 10): '결제 전'}</td>
+                <td>{order.isDelivered ? order.deliveredAt.subString(0, 10): '배송 전'}</td>
                 <td>
                   <button type="button" className="small" onClick={() => {props.history.push(`/order/${order._id}`)}}>
                     상세정보
