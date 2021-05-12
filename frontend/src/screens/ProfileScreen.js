@@ -4,7 +4,6 @@ import { detailsUser, updateUserProfile } from '../actions/userActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { USER_UPDATE_PROFILE_REQUEST } from '../constants/userConstants';
-import { userUpdateProfileReducer } from '../reducers/userReducer';
 
 export default function ProfileScreen() {
   const [name, setName] = useState('');
@@ -37,6 +36,7 @@ export default function ProfileScreen() {
       dispatch(updateUserProfile({userId: user._id, name, email, password}));
     }
   };
+
   return (
     <div>
       <form className="form" onSubmit={submitHandler}>
@@ -44,13 +44,13 @@ export default function ProfileScreen() {
           <h1>내 프로필</h1>
         </div>
         {
-          loading ? <LoadingBox></LoadingBox> 
-          : error ? <MessageBox variant="danger">{error}</MessageBox> 
+          loading ? (<LoadingBox></LoadingBox>) 
+          : error ? (<MessageBox variant="danger">{error}</MessageBox>)
           :
           <>
           {loadingUpdate && <LoadingBox></LoadingBox>}
-          {errorUpdate && (<MessageBox varaint="danger">{errorUpdate}</MessageBox>)}
-          {successUpdate && <MessageBox variant="success">Profile Updated Successfully</MessageBox>}
+          {errorUpdate && (<MessageBox variant="danger">{errorUpdate}</MessageBox>)}
+          {successUpdate && (<MessageBox variant="success">프로필이 성공적으로 업데이트 되었습니다</MessageBox>)}
             <div>
               <label htmlFor="name">
                 이름
