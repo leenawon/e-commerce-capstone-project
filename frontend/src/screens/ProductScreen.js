@@ -29,7 +29,7 @@ export default function ProductScreen(props) {
                 <MessageBox variant="danger">{error}</MessageBox>
                 ) : (
             <div>
-            <Link to="/" className="back"><i class="fas fa-arrow-left"></i>이전 페이지로</Link>
+            <Link to="/" className="back"><i className="fas fa-arrow-left"></i>이전 페이지로</Link>
             <div className="row top">
                 <div className="col-2">
                     <img className="large" src={product.image} alt={product.name}></img>
@@ -53,7 +53,7 @@ export default function ProductScreen(props) {
                         </ul>
                     </div>
                     <div className="col-1">
-                        <div className="card card-body">
+                        <div className="card card-content">
                             <ul>
                                 <li>
                                     <div className="row">
