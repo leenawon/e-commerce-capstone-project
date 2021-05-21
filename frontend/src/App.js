@@ -35,7 +35,7 @@ function App() {
     <BrowserRouter>
       <div className="grid-container">
         {/* Header */}
-        <header id="header" className="row-sorting">
+        <header className="row-sorting">
           <div>
             <Link to="/" className="brand">
             Thinket</Link>
@@ -97,7 +97,7 @@ function App() {
           </div>
         </header>
         {/* Main */}
-        <main id="main">
+        <main>
           <Route path="/cart/:id?" component = {CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen} exact></Route>
           <Route path="/product/:id/edit" component={ProductEditScreen} exact></Route>
@@ -114,7 +114,7 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route>
           
         </main>
-        <footer id="footer" className="row-sorting center">
+        <footer className="row-sorting center">
           All right reserved
         </footer>
       </div>
