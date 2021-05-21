@@ -24,7 +24,7 @@ export default function OrderListScreen(props) {
     return (
         <div>
             <div>
-                <h1>주문</h1>
+                <h1 className="orderlist">주문내역</h1>
                     {loadingDelete && <LoadingBox></LoadingBox>}
                     {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
                     {loading ? <LoadingBox></LoadingBox>:

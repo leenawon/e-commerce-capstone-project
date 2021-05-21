@@ -6,9 +6,16 @@
 /* Common */
 #root {
     height: 100%;
+    box-sizing: border-box;
+}
+
+.row h1 {
+    text-align: center;
+    margin-left: 45%;
 }
 
 h1 {
+    text-align: center;
     font-size: 1.8rem;
     padding: 1rem 0;
 }
@@ -40,7 +47,7 @@ li {
 button {
     padding: 1rem;
     border-radius: 0.5rem;
-    border: 0.1rem #a4a4a4 solid;
+    border: 0.1rem #c8e9c3 solid;
     font-size: 1.6rem;
     font-family: Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -50,11 +57,16 @@ button {
 }
 
 button:hover {
-    border: 0.1rem #404040 solid;
+    border: 0.1rem #c8e9c3 solid;
+    background-color: #c8e9c3;
 }
 
 button.primary {
     background-color: #c8e9c3;
+}
+
+button.primary:hover {
+    background-color: #dcf3b6;
 }
 
 button.block {
@@ -94,7 +106,7 @@ body {
 }
 
 .badge {
-    background-color: #f02020;
+    background-color: #cca387;
     color: var(--white-color);
     border-radius: 50%;
     padding: 0.2rem 0.7rem;
@@ -103,7 +115,7 @@ body {
 }
 
 #header a:hover {
-    color: #798777;
+    color: #98b694;
 }
 
 .row {
@@ -111,6 +123,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    width: 92%;
+    margin: 0 4% 0 4%;
 }
 
 .row.center {
@@ -246,7 +260,7 @@ img.product-image {
 }
 
 .alert-danger {
-    color: #a02020;
+    color: #d6af8b;
     background-color: #ffe0e0e0;
 }
 
@@ -286,7 +300,7 @@ img.product-image {
     min-width: 12rem;
     padding: 1rem;
     z-index: 1;
-    background-color: #203040;
+    background-color: #798777;
     margin: 0;
     margin-top: 0.4rem;
     border-radius: 0.5rem;
@@ -306,23 +320,28 @@ img.product-image {
 }
 
 .checkout-steps > div.active {
-    border-top-color: #f08000;
-    color: #f08000;
+    border-top-color: #f7c389;
+    color: #f7c389;
 }
 
 /* Table */
 .table {
-    width: 100%;
+    margin: 0 4% 0 4%;
+    width: 92%;
     border-collapse: collapse;
 }
 
-.table tbody tr:nth-of-type(odd) {
-    background-color: #f4f4f4;
+.table tbody tr:nth-of-type(even) {
+    background-color: #ecf3e3;
+}
+
+.table th {
+    background-color: #dbf3d4;
 }
 
 .table td,
 .table th {
-    text-align: left;
+    text-align: center;
     border: 0.1rem solid #e4e4e4;
     padding: 0.5rem;
 }
@@ -351,6 +370,5 @@ img.product-image {
 }
 
 .select:hover {
-    /* border: 3px solid #bdd2b6; */
     background-color: #bdd2b6;
 }
