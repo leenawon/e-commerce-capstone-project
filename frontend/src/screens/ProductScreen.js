@@ -29,7 +29,7 @@ export default function ProductScreen(props) {
                 <MessageBox variant="danger">{error}</MessageBox>
                 ) : (
             <div>
-            <Link to="/">이전 페이지로</Link>
+            <Link to="/" className="back"><i class="fas fa-arrow-left"></i>이전 페이지로</Link>
             <div className="row top">
                 <div className="col-2">
                     <img className="large" src={product.image} alt={product.name}></img>
@@ -58,7 +58,7 @@ export default function ProductScreen(props) {
                                 <li>
                                     <div className="row">
                                         <div>가격</div>
-                                        <div className="price">${product.price}</div>
+                                        <div className="price">{product.price}원</div>
                                     </div>
                                 </li>
                                 <li>
@@ -75,7 +75,7 @@ export default function ProductScreen(props) {
                                             <div className="row">
                                                 <div>수량</div>
                                                 <div>
-                                                    <select 
+                                                    <select className="select"
                                                         value={qty} 
                                                         onChange={(e) => setQty(e.target.value)}>
                                                         {
