@@ -63,7 +63,7 @@ useEffect(() => {
         <div>
           <label/>
           <button className="primary" type="submit">
-            Register
+            회원가입
           </button>
         </div>
         <div>

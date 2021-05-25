@@ -80,16 +80,16 @@ function App() {
                 </Link>
                 <ul className ="dropdown-content">
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/dashboard">대시보드</Link>
                   </li>
                   <li>
-                    <Link to="/productlist">Products</Link>
+                    <Link to="/productlist">상품 목록</Link>
                   </li>
                   <li>
-                    <Link to="/orderlist">Orders</Link>
+                    <Link to="/orderlist">주문 내역</Link>
                   </li>
                   <li>
-                    <Link to="/userlist">Users</Link>
+                    <Link to="/userlist">사용자 목록</Link>
                   </li>
                 </ul>
               </div>
