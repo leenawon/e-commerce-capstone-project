@@ -96,4 +96,18 @@ userRouter.delete('/:id', isAuth, isAdmin, expressAsyncHandler(async(req, res) =
     }
 }));
 
+userRouter.put('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if(user) {
+        user.name = req.body.name || user.name;
+        user.email = req.body.email || user.email;
+        user.isSeller = Boolean(req.body.isSeller);
+        user.isAdmin = Boolean(req.body.isAdmin);
+        const updatedUser = await user.save();
+        res.send({message:'사용자 변경이 완료되었습니다.', user: updatedUser});
+    } else {
+        res.status(404).send({message: '사용자를 찾을 수 없습니다.'});
+    }
+}));
+
 export default userRouter;

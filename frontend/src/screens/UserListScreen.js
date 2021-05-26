@@ -3,22 +3,24 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser, listUsers } from '../actions/userActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { USER_DETAILS_RESET } from '../constants/userConstants';
 
-export default function UserListScreen() {
-  const userList = useSelector(state => state.userList);
+export default function UserListScreen(props) {
+  const userList = useSelector((state) => state.userList);
   const {loading, error, users} = userList;
 
-  const userDelete = useSelector(state => state.userDelete);
+  const userDelete = useSelector((state) => state.userDelete);
   const {loading : loadingDelete, error: errorDelete, success : successDelete} = userDelete;
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(listUsers());
+    dispatch({type:USER_DETAILS_RESET});
   }, [dispatch, successDelete]);
 
   const deleteHandler = (user) => {
-    if(window.confirm('삭제하시겠습니까?')) {
+    if(window.confirm('사용자를 삭제하시겠습니까?')) {
       dispatch(deleteUser(user._id));
     }
   };
@@ -54,7 +56,7 @@ export default function UserListScreen() {
                   <td>{user.isSeller ? 'O' : 'X'}</td>
                   <td>{user.isAdmin ? 'O' : 'X'}</td>
                   <td>
-                    <button type="button" className="small">수정</button>
+                    <button type="button" className="small" onClick={() => props.history.push(`/user/${user._id}/edit`)}>수정</button>
                     <button type="button" className="small" onClick={() => deleteHandler(user)}>삭제</button>
                   </td>
                 </tr>
