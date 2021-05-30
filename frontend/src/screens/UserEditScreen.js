@@ -4,7 +4,6 @@ import { detailsUser, updateUser } from '../actions/userActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { USER_UPDATE_RESET } from '../constants/userConstants';
-import { userRegisterReducer } from '../reducers/userReducer';
 
 export default function UserEditScreen(props) {
     const userId = props.match.params.id;

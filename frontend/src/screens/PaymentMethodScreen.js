@@ -49,7 +49,7 @@ export default function PaymentMethodScreen(props) {
                 </div>
                 <div>
                     <button className="primary" type="submit">
-                        Continue
+                        결제 진행 하기
                     </button>
                 </div>
             </form>

@@ -54,7 +54,7 @@ export default function CartScreen(props) {
                                             </select>
                                         </div>
                                         <div>
-                                            ${item.price}
+                                            {item.price}원
                                         </div>
                                         <div>
                                             <button type="button" onClick={() => removeFromCartHandler(item.product)}>삭제</button>
@@ -72,7 +72,7 @@ export default function CartScreen(props) {
                     <ul>
                         <li>
                             <h2>
-                                결제예상금액 ({cartItems.reduce((a,c) => a + c.qty, 0)} items): ${cartItems.reduce((a,c) => a + c.price * c.qty, 0)}
+                                결제예상금액 ({cartItems.reduce((a,c) => a + c.qty, 0)} 개): {cartItems.reduce((a,c) => a + c.price * c.qty, 0)}원
                             </h2>
                         </li>
                         <li>
