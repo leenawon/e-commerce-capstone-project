@@ -37,17 +37,17 @@ useEffect(() => {
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
-          <label htmlFor="email">Email address</label>
+          <label htmlFor="email">이메일 주소</label>
           <input type="email" id="email" placeholder="이메일을 입력하세요" required onChange={e => setEmail(e.target.value)}></input>
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">비밀번호</label>
           <input type="password" id="password" placeholder="비밀번호를 입력하세요" required onChange={e => setPassword(e.target.value)}></input>
         </div>
         <div>
           <label/>
           <button className="primary" type="submit">
-            Sign In
+            로그인
           </button>
         </div>
         <div>

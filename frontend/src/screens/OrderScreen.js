@@ -100,7 +100,7 @@ export default function OrderScreen(props) {
                                 <Link to={`/product/${item.product}`}>{item.name}</Link>
                             </div> 
                             <div>
-                                {item.qty} x ${item.price} = ${item.qty * item.price}
+                                {item.qty} x {item.price}원 = {item.qty * item.price}원
                             </div> 
                         </div>
                       </li>

@@ -51,11 +51,11 @@ export default function UserEditScreen(props) {
                 error? (<MessageBox variant="danger"> {error} </MessageBox> ): (
                 <>
                 <div>
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">이름</label>
                     <input id="name" type="text" placeholder="이름을 입력해주세요" value={name} onChange={(e) => setName(e.target.value)}></input>
                 </div>
                 <div>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">이메일</label>
                     <input id="email" type="email" placeholder="이메일을 입력해주세요" value={email} onChange={(e) => setEmail(e.target.value)}></input>
                 </div>
                 <div>
@@ -68,7 +68,7 @@ export default function UserEditScreen(props) {
                 </div>
                 <div>
                     <button type="submit" className="primary">
-                        Update
+                        수정하기
                     </button>
                 </div>
                 </>
