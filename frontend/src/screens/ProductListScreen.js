@@ -4,7 +4,6 @@ import { createProduct, deleteProduct, listProducts } from '../actions/productAc
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { PRODUCT_CREATE_RESET, PRODUCT_DELETE_RESET } from '../constants/productConstants';
-import { userRegisterReducer } from '../reducers/userReducer';
 
 export default function ProductListScreen(props) {
   const sellerMode = props.match.path.indexOf('/seller') >= 0;
