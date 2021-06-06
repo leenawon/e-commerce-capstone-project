@@ -414,3 +414,8 @@ img.product-image {
     margin: 0;
   }
 }
+
+/* Carousel */
+.carousel .slide img {
+  max-width: 30rem;
+}
