@@ -9,7 +9,7 @@ export default function CartScreen(props) {
     const qty = props.location.search? Number(props.location.search.split('=')[1]) : 1;
     
     const cart = useSelector(state => state.cart);
-    const { cartItems } = cart;
+    const { cartItems, error } = cart;
     const dispatch = useDispatch();
     useEffect(() => {
         if(productId) {
@@ -24,12 +24,13 @@ export default function CartScreen(props) {
 
     const checkoutHandler = () => {
         props.history.push('/signin?redirect=shipping');
-    }
+    };
 
     return (
         <div className="row top">
             <div className="col-2">
                 <h1>장바구니</h1>
+                {error && <MessageBox variant="danger">{error}</MessageBox>}
                 {cartItems.length === 0 ? <MessageBox>장바구니가 비었습니다 <Link to="/">쇼핑 하러가기</Link></MessageBox>
                 :
                 (
