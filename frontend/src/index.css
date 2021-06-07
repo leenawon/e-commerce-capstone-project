@@ -167,7 +167,7 @@ header a:hover {
 
 .grid-container {
   display: grid;
-  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-areas: "header" "main" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -421,17 +421,6 @@ img.product-image {
 }
 
 .carousel .slide .legend {
-  bottom: 10px;
-  position: absolute;
-  left: 50%;
-  margin-left: -45%;
-  width: 90%;
-  border-radius: 10px;
-  background: #fff;
-  color: #fff;
-  padding: 10px;
-  font-size: 12px;
-  text-align: center;
-  opacity: 0.25;
-  transition: opacity 0.35s ease-in-out;
+  background: #bdd2b6 !important;
+  color: black !important;
 }

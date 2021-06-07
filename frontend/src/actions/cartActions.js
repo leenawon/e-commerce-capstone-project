@@ -4,8 +4,9 @@ import Axios from 'axios';
 export const addToCart = (productId, qty) => async(dispatch, getState) => {
   const {data} = await Axios.get(`/api/products/${productId}`);
   const { cart: {cartItems}} = getState();
+
   if(cartItems.length > 0 && data.seller._id !== cartItems[0].seller._id){
-    dispatch({type: CART_ADD_ITEM_FAIL, payload:"장바구니에 추가하실수 없습니다. ${cartItems[0].seller.seller.name} "});
+    dispatch({type: CART_ADD_ITEM_FAIL, payload:`장바구니에 추가하실수 없습니다. ${cartItems[0].seller.seller.name}`});
   } else {
     dispatch ({
     type: CART_ADD_ITEM,
@@ -21,7 +22,6 @@ export const addToCart = (productId, qty) => async(dispatch, getState) => {
   });
   localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
   }
-  
 };
 
 export const removeFromCart = (productId) => (dispatch, getState) => {
