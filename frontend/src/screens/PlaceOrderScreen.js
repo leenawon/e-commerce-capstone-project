@@ -92,13 +92,13 @@ export default function PlaceOrderScreen(props) {
               <li>
                 <div className="row">
                   <div>상품 금액</div>
-                  <div>${cart.itemsPrice.toFixed}</div>
+                  <div>{cart.itemsPrice.toFixed}원</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>배송비</div>
-                  <div>${cart.shippingPrice}</div>
+                  <div>{cart.shippingPrice}원</div>
                 </div>
               </li>
               <li>
@@ -107,7 +107,7 @@ export default function PlaceOrderScreen(props) {
                     <strong>총 결제 금액</strong>
                   </div>
                   <div>
-                    <strong>${cart.totalPrice}</strong>
+                    <strong>{cart.totalPrice}원</strong>
                   </div>
                 </div>
               </li>
