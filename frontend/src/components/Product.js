@@ -22,7 +22,7 @@ export default function Product(props) {
             {product.price}원
           </div>
           <div>
-            <Link to={`/seller/${products.seller._id}`}>
+            <Link to={`/seller/${product.seller._id}`}>
               {product.seller.seller.name}
             </Link>
           </div>
