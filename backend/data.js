@@ -3,25 +3,25 @@ import bcrypt from 'bcryptjs';
 // Product Data
 const data = {
   users: [
-    {
-      name:'dawon',
-      email: 'dawon@example.com',
-      password: bcrypt.hashSync('1234', 8),
-      isAdmin: true,
-      seller:{
-        name: 'oni',
-        logo: 'oni',
-        description: 'oni',
-        numReviews: 0,
-        rating: 0
-      }
-    },
-    {
-      name:'nawon',
-      email: 'nawon@example.com',
-      password: bcrypt.hashSync('5678', 8),
-      isAdmin: false,
-    },
+    // {
+    //   name:'dawon',
+    //   email: 'dawon@example.com',
+    //   password: bcrypt.hashSync('1234', 8),
+    //   isAdmin: true,
+    //   seller:{
+    //     name: 'oni',
+    //     logo: 'oni',
+    //     description: 'oni',
+    //     numReviews: 0,
+    //     rating: 0
+    //   }
+    // },
+    // {
+    //   name:'nawon',
+    //   email: 'nawon@example.com',
+    //   password: bcrypt.hashSync('5678', 8),
+    //   isAdmin: false,
+    // },
   ],
   products: [
     // {
