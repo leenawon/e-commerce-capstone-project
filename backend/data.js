@@ -8,6 +8,13 @@ const data = {
       email: 'dawon@example.com',
       password: bcrypt.hashSync('1234', 8),
       isAdmin: true,
+      seller:{
+        name: 'oni',
+        logo: 'oni',
+        description: 'oni',
+        numReviews: 0,
+        rating: 0
+      }
     },
     {
       name:'nawon',
