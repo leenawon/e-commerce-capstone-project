@@ -71,7 +71,7 @@ productRouter.delete('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, re
         const deleteProduct = await product.remove();
         res.send({message: '상품이 삭제되었습니다', product: deleteProduct});
     } else {
-        res.status(404).send({message: 'Prodct Not Found'});
+        res.status(404).send({message: 'Product Not Found'});
     }
 }));
 
