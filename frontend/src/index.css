@@ -48,6 +48,10 @@ li {
   margin-top: 1rem;
 }
 
+input:focus {
+  outline: none;
+}
+
 button {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -192,7 +196,7 @@ footer {
 
 .row-sorting {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -423,4 +427,18 @@ img.product-image {
 .carousel .slide .legend {
   background: #bdd2b6 !important;
   color: black !important;
+}
+
+/* Search Box */
+.search button {
+  margin-right: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-right: none;
+}
+
+.search input {
+  padding: 1.2rem 0.8rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
 }
