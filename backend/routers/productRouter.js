@@ -1,6 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
+import User from '../models/userModel.js';
 import Product from '../models/productModel.js';
 import {isAdmin, isAuth, isSellerOrAdmin} from '../utils.js';
 
@@ -11,10 +12,12 @@ productRouter.get('/', expressAsyncHandler(async (req, res) => {
     const category = req.query.category || '';
     const seller = req.query.seller || '';
     const order = req.query.order || '';
+    const pageSize = 3;
+    const page = Number(req.query.pageNumber) || 1;
     const min = req.query.min && Number(req.query.min) !== 0 ? Number(req.query.min) : 0;
     const max = req.query.max && Number(req.query.max) !== 0 ? Number(req.query.max) : 0;
     const rating = req.query.rating && Number(req.query.rating) !== 0 ? Number(req.query.rating) : 0;
-    const nameFilter = name? {name : {$regex : name, $options: 'i'}}: {};
+    const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};
     const sellerFilter = seller ? { seller } : {};
     const categoryFilter = category ? { category } : {};
     const priceFilter = min && max ? { price: { $gte: min, $lte: max } } : {};
@@ -28,8 +31,20 @@ productRouter.get('/', expressAsyncHandler(async (req, res) => {
                     ? { rating: -1 }
                     : { _id: -1 };
     
-    const products = await Product.find({...sellerFilter, ...nameFilter, ...categoryFilter, ...priceFilter, ...ratingFilter}).populate('seller','seller.name seller.logo').sort(sortOrder);
-    res.send(products);
+    const count = await Product.count({
+        ...sellerFilter,
+        ...nameFilter,
+        ...categoryFilter,
+        ...priceFilter,
+        ...ratingFilter,
+    });
+
+    const products = await Product.find({ ...sellerFilter, ...nameFilter, ...categoryFilter, ...priceFilter, ...ratingFilter })
+        .populate('seller', 'seller.name seller.logo')
+        .sort(sortOrder)
+        .skip(pageSize * (page - 1))
+        .limit(pageSize);
+    res.send({products, page, pages:Math.ceil(count / pageSize)});
 }));
 
 productRouter.get(
