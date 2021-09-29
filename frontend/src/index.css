@@ -214,7 +214,7 @@ button.close-sidebar {
 
 .grid-container {
   display: grid;
-  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-areas: "header" "main" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -503,4 +503,35 @@ img.product-image {
 }
 .pagination a.active {
   font-weight: bold;
+}
+
+/* Dashboard */
+.summary > li {
+  border: 0.1rem #c0c0c0 solid;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  flex: 1 1 20rem;
+}
+
+.summary-title {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.summary-body {
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.summary-title.color1 {
+  background-color: #f0e0e0;
+}
+
+.summary-title.color2 {
+  background-color: #e0f0e0;
+}
+
+.summary-title.color3 {
+  background-color: #e0e0f0;
 }
