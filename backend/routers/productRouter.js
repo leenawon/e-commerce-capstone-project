@@ -12,7 +12,7 @@ productRouter.get('/', expressAsyncHandler(async (req, res) => {
     const category = req.query.category || '';
     const seller = req.query.seller || '';
     const order = req.query.order || '';
-    const pageSize = 3;
+    const pageSize = 8;
     const page = Number(req.query.pageNumber) || 1;
     const min = req.query.min && Number(req.query.min) !== 0 ? Number(req.query.min) : 0;
     const max = req.query.max && Number(req.query.max) !== 0 ? Number(req.query.max) : 0;
