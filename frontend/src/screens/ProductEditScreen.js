@@ -119,7 +119,7 @@ export default function ProductEditScreen(props) {
             </div>
             <div>
               <label></label>
-              <button className="primary" type="submit">수정하기</button>
+              <button className="primary" type="submit">등록하기</button>
             </div>
           </>
         }
