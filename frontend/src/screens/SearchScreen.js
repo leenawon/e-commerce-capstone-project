@@ -55,7 +55,7 @@ export default function SearchScreen(props) {
           (<div>검색결과 : {products.length}개</div>)
         }
         <div>
-          Sort by{' '}
+          정렬하기{' '}
           <select value={order} onChange={(e) => {
             props.history.push(getFilterUrl({ order: e.target.value }));
           }}>
@@ -110,7 +110,7 @@ export default function SearchScreen(props) {
                     to={getFilterUrl({ rating: r.rating })}
                     className={`${r.rating}` === `${rating}` ? 'active' : ''}
                   >
-                    <Rating caption={' & up'} rating={r.rating}></Rating>
+                    <Rating caption={' & 이상'} rating={r.rating}></Rating>
                   </Link>
                 </li>
               ))}
@@ -125,7 +125,7 @@ export default function SearchScreen(props) {
             :
             (
               <>
-                {products.length === 0 && <MessageBox>No Product Found</MessageBox>}
+                {products.length === 0 && <MessageBox>상품이 없습니다.</MessageBox>}
                 <div className="row-sorting center">
                 {
                   products.map((product) => (
