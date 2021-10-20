@@ -92,7 +92,7 @@ export default function PlaceOrderScreen(props) {
               <li>
                 <div className="row">
                   <div>상품 금액</div>
-                  <div>{cart.itemsPrice.toFixed}원</div>
+                  <div>{cart.totalPrice}원</div>
                 </div>
               </li>
               <li>
