@@ -120,7 +120,7 @@ export default function OrderScreen(props) {
               <li>
                 <div className="row">
                   <div>상품 금액</div>
-                  <div>{order.itemsPrice.toFixed}원</div>
+                  <div>{order.totalPrice}원</div>
                 </div>
               </li>
               <li>
